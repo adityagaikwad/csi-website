@@ -42,7 +42,7 @@ http://www.templatemo.com/tm-497-upper
                 <nav class="navbar">
                     <div class="tm-navbar-bg">
                         
-                        <a class="navbar-brand text-uppercase" href="#">Upper</a>
+                        <a class="navbar-brand text-uppercase" href="#">C.S.I. S.P.I.T.</a>
 
                         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
                             &#9776;
@@ -296,6 +296,26 @@ http://www.templatemo.com/tm-497-upper
                                             </figcaption>           
                                         </figure>
                                     </div>  
+                                    <div class="grid-item">
+                                        <figure class="effect-ruby">
+                                            <img src="img/tm-img-07-tn.jpg" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Picture <span>Three</span></h2>
+                                                <p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>
+                                                <a href="img/tm-img-07.jpg">View more</a>
+                                            </figcaption>           
+                                        </figure>
+                                    </div>
+                                    <div class="grid-item">
+                                        <figure class="effect-ruby">
+                                            <img src="img/tm-img-07-tn.jpg" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Picture <span>Three</span></h2>
+                                                <p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>
+                                                <a href="img/tm-img-07.jpg">View more</a>
+                                            </figcaption>           
+                                        </figure>
+                                    </div>
                                 </div>                                 
                             </div>
                         </div>                      
@@ -488,11 +508,14 @@ http://www.templatemo.com/tm-497-upper
 
             function initialize() {
                 var mapOptions = {
-                    zoom: 15,
+                    zoom: 17,
                     center: new google.maps.LatLng(19.1231622,72.8349814),
                     scrollwheel: false
                 };
-            
+
+                // to add a marker
+            	var myLatLng = {lat: 19.1231622, lng: 72.8349814};
+
                 map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
 
                 google.maps.event.addDomListener(map, 'idle', function() {
@@ -502,6 +525,13 @@ http://www.templatemo.com/tm-497-upper
                 google.maps.event.addDomListener(window, 'resize', function() {
                   map.setCenter(center);
                 });
+
+
+		        var marker = new google.maps.Marker({
+		          position: myLatLng,
+		          map: map,
+		          title: 'Hello World!'
+		        });
             }
 
             function calculateCenter() {
