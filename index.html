@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="image/favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/csi_favicon.ico" type="image/x-icon">
+    <!-- Loading AJAX -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 
     <title>C.S.I. | S.P.I.T.</title>
 <!--
@@ -226,7 +229,6 @@ http://www.templatemo.com/tm-497-upper
                 </li>
 
                 <!-- Page 4 The Committee -->
-                <!-- Page 3 Events -->
                 <li>                    
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="4" data-page-type="gallery">
@@ -235,16 +237,17 @@ http://www.templatemo.com/tm-497-upper
                                 <!-- Gallery Two pop up connected with JS code below -->
                                     
                                     <div class="tm-img-gallery-info-container">                                    
-                                        <h2 class="tm-text-title tm-gallery-title"><span class="tm-white">Second Gallery</span></h2>
-                                        <p class="tm-text"><span class="tm-white">Aenean nulla lorem, laoreet eu nibh et, lacinia ullamcorper dui. Nullam ut tincidunt odio. Morbi accumsan diam vel enim cursus, in dapibus eros tristique.</span>
+                                        <h2 class="tm-text-title tm-gallery-title"><span class="tm-white">The people behind <b>C.S.I. - S.P.I.T.</b></span></h2> <hr width="100%" />
+                                        <p class="tm-text"><span class="tm-white">Aditya nulla lorem, laoreet eu nibh et, lacinia ullamcorper dui. Nullam ut tincidunt odio. Morbi accumsan diam vel enim cursus, in dapibus eros tristique.</span>
                                         </p>
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-ruby">
                                             <img src="img/tm-img-05-tn.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
-                                                <h2 class="tm-figure-title">Picture <span>One</span></h2>
-                                                <p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>
+                                                <h2 class="tm-figure-title">Staff Co-ordinator<br/><span></span>  
+                                                </h2>
+                                                <p class="tm-figure-description">Prof. S. N. Dhage</p>
                                                 <a href="img/tm-img-05.jpg">View more</a>
                                             </figcaption>           
                                         </figure>
@@ -253,8 +256,8 @@ http://www.templatemo.com/tm-497-upper
                                         <figure class="effect-ruby">
                                             <img src="img/tm-img-06-tn.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
-                                                <h2 class="tm-figure-title">Picture <span>Two</span></h2>
-                                                <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+                                                <h2 class="tm-figure-title">Chairperson<span></span></h2>
+                                                <p class="tm-figure-description">Aditya Gaikwad</p>
                                                 <a href="img/tm-img-06.jpg">View more</a>
                                             </figcaption>           
                                         </figure>
@@ -339,7 +342,7 @@ http://www.templatemo.com/tm-497-upper
                                                 <p class="tm-text">Praesent tempus dapibus odio nec elementum. Sed elementum est quis tortor faucibus, et molestie nibh finibus. Mauris condimentum ex vestibulum fringilla consectetur.</p>                                                
                                                 
                                                 <!-- contact form -->
-                                                <form action="index.html" method="post" class="tm-contact-form" id = "msg">
+                                                <form action="index.html" class="tm-contact-form" id = "msg">
 
                                                     <div class="form-group">
                                                         <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
@@ -353,19 +356,19 @@ http://www.templatemo.com/tm-497-upper
                                                         <textarea id="contact_message" name="contact_message" class="form-control" rows="5" placeholder="Your message" required></textarea>
                                                     </div> 
 
-                                                    <button type="submit" class="pull-xs-right tm-submit-btn">Send</button>  
+                                                    <button type="submit" onclick="sendmail()" id = "btn_submit" class="pull-xs-right tm-submit-btn">Send</button>  
                                                 
                                                 </form>  
                                             </div>
 
-                                            <script type="text/javascript">
+                                            <!-- <script type="text/javascript">
                                             	var form = document.getElementById("msg");
                                             	form.onsubmit = function() {
                                             		alert("Message sent!");
                                             		return true;
                                             	}
                                             </script>
-                                            
+ -->                                            
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding tm-textbox-padding-contact">
                                                 <h2 class="tm-contact-info">Bhavans Campus, Munshi Nagar, Andheri (West), Mumbai</h2>
                                                 <!-- google map goes here -->
@@ -417,6 +420,41 @@ http://www.templatemo.com/tm-497-upper
         <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
         
         <script>
+
+        	function sendmail() {
+
+        		var form = document.getElementById("msg");
+              	form.onsubmit = function() {
+                	alert("Message sent!");
+                	return true;
+              	}
+              
+				// $.ajax({
+			 //    	  type: “POST”,
+				// 	  url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+				// 	  data: {
+				// 	    ‘key’: ‘2hHNvsZf9GOYS6pOg41Hqg’,
+				// 	    ‘message’: {
+				// 	      ‘text’: document.getElementById("contact_message"),	
+				// 	      ‘from_email’: document.getElementById("contact_email"),
+				// 	      ‘from_name’: document.getElementById("contact_name"),
+				// 	      ‘to’: [
+				// 	          {
+				// 	            ‘email’: ‘spit.csi@gmail.com’,
+				// 	            ‘name’: ‘CSI’,
+				// 	            ‘type’: ‘to’
+				// 	          } 
+				// 	            ],
+				// 	      ‘autotext’: ‘true’,
+				// 	      ‘subject’: ‘YOUR SUBJECT HERE!’,
+				// 	      ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
+				// 	    }
+				// 	  }
+				// 	 }).done(function(response) {
+				// 	   console.log(response); // if you're into that sorta thing
+
+				// });
+			}
 
             function adjustHeightOfPage(pageNo) {
 
