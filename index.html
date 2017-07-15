@@ -119,8 +119,8 @@ http://www.templatemo.com/tm-497-upper
                                 <div class="col-xs-12">
                                     <div class="tm-flex">
                                         <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-textbox-padding tm-white-box-margin-b">
-                                            <h2 class="tm-text-title">Lorem ipsum dolor</h2>
-                                            <p class="tm-text">Nulla efficitur, ligula et imperdiet volutpat, lacus tortor tempus massa, eget tempus quam nibh vel nulla. Vivamus non molestie leo, non tincidunt diam. Mauris sagittis elit in velit ultricies aliquet sed in magna. Pellentesque semper, est nec consequat viverra, sem augue tincidunt nisi, a posuere nisi sapien sed sapien. Nulla facilisi.</p>
+                                            <h2 class="tm-text-title">What is C.S.I.?</h2>
+                                            <p class="tm-text">The seed for the Computer Society of India (CSI) was first sown in the year 1965 with a handful of IT enthusiasts who were a computer user group and felt the need to organize their activities. They also wanted to share their knowledge and exchange ideas on what they felt was a fast emerging sector. Today the CSI takes pride in being the largest and most professionally managed association of and for IT professionals in India. The purposes of the Society are scientific and educational directed towards the advancement of the theory and practice of computer science & IT.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -130,12 +130,12 @@ http://www.templatemo.com/tm-497-upper
                                 <div class="col-xs-12">
                                     <div class="tm-flex">
                                         <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
-                                            <h2 class="tm-text-title">Nulla facilisi</h2>
-                                            <p class="tm-text">Donec vitae bibendum est, et ultrices urna. Curabitur ac bibendum augue, a convallis mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultrices placerat arcu.</p>
+                                            <h2 class="tm-text-title">So who are we?</h2>
+                                            <p class="tm-text">We are the C.S.I. Student Branch of Sardar Patel Institute of Technology. Formed in 2009, CSI-SPIT is an altruistic society in college initiating workshops, events and seminars to explore the cornucopia of information other than the regular curriculum offered by the university. As part of our endeavour to bring together and assimilate various aspects of technical and non-technical education, number of seminars and workshops are conducted by professionals imparting knowledge to the students of the college. We also encourage member students to organize events by themselves so that it imbibes in them the skills of management, self-confidence and helps to exchange views and information, learn and share ideas. An annual 10 day industrial visit cum trip is organized to different parts of the country.This facilitates the students' interaction with the industries in different parts of the country and gives them the valuable experience of witnessing the ground realities of the work environment intertwined with the pleasures of visiting the most beautiful places in India. We at CSI-SPIT aim at exploring the acme within every individual so that they can realize their dreams in reality.</p>
                                         </div>
                                         <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
-                                            <h2 class="tm-text-title">Aliquam sem sem</h2>
-                                            <p class="tm-text">Proin sagittis mauris dolor, vel efficitur lectus dictum nec. Sed ultrices placerat arcu, id malesuada metus cursus suscipit. Donex quis consectetur ligula. Proin accumsan eros id nisi porttitor, a facilisis quam cursus.</p>     
+                                            <h2 class="tm-text-title">C.S.I. - Mumbai</h2>
+                                            <p class="tm-text">The Computer Society of India is a non-profit professional meet to exchange views and information learn and share ideas. The wide spectrum of members is committed to the advancement of the theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain the integrity and competence of the profession and fosters a sense of partnership amongst members. Besides the activities held at the Chapter and Student Branches, the Society also conducts periodic conferences, seminars at Regional and Divisional levels.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -338,7 +338,7 @@ http://www.templatemo.com/tm-497-upper
                                                 <p class="tm-text">Praesent tempus dapibus odio nec elementum. Sed elementum est quis tortor faucibus, et molestie nibh finibus. Mauris condimentum ex vestibulum fringilla consectetur.</p>                                                
                                                 
                                                 <!-- contact form -->
-                                                <form action="index.html" method="post" class="tm-contact-form">
+                                                <form action="index.html" method="post" class="tm-contact-form" id = "msg">
 
                                                     <div class="form-group">
                                                         <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
@@ -357,6 +357,14 @@ http://www.templatemo.com/tm-497-upper
                                                 </form>  
                                             </div>
 
+                                            <script type="text/javascript">
+                                            	var form = document.getElementById("msg");
+                                            	form.onsubmit = function() {
+                                            		alert("Message sent!");
+                                            		return true;
+                                            	}
+                                            </script>
+                                            
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding tm-textbox-padding-contact">
                                                 <h2 class="tm-contact-info">Bhavans Campus, Munshi Nagar, Andheri (West), Mumbai</h2>
                                                 <!-- google map goes here -->
